@@ -1,0 +1,25 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: crowd-project
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:          # 这个是用来实现session共享的功能，将session保存在redis服务器中
+    host: 192.168.13.128
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+
+aliyun:
+  oss:
+    access-key-id: LTAI5tKpWkGR54a37CnJWHvA
+    access-key-secret: 7ktWKqwhBZZEFkGqviQtxhkudn5acA
+    bucket-domain: https://crowd-2020.oss-cn-hangzhou.aliyuncs.com
+    bucket-name: crowd-2020
+    end-point: oss-cn-hangzhou.aliyuncs.com

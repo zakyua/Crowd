@@ -1,0 +1,20 @@
+VO：View Object 视图对象
+用途 1：接收浏览器发送过来的数据
+用途 2：把数据发送给浏览器去显示
+
+PO:Persistent Object 持久化对象
+用途 1：将数据封装到 PO 对象存入数据库
+用途 2：将数据库数据查询出来存入 PO 对象
+所以 PO 对象是和数据库表对应，一个数据库表对应一个 PO 对象
+
+
+DO：Data Object 数据对象
+用途 1：从 Redis 查询得到数据封装为 DO 对象
+用途 2：从 ElasticSearch 查询得到数据封装为 DO 对象
+用途 3：从 Solr 查询得到数据封装为 DO 对象
+……
+从中间件或其他第三方接口查询到的数据封装为 DO 对象
+
+DTO：Data Transfer Object 数据传输对象
+用途 1：从 Consumer 发送数据到 Provider
+用途 2：Provider 返回数据给 Consum

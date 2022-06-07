@@ -1,0 +1,13 @@
+server:
+  port: 1000  # 设置eureka的端口号
+spring:
+  application:
+    name: crowd-eureka    # 给eureka的微服务起一个名字
+eureka:
+  instance:
+    hostname: localhost  # 设置网络地址
+  client:
+    fetch-registry: false   # 表示自己不需要注册到Jon控制中心
+    register-with-eureka: false      # 自己也不需要去注册中心取值
+    service-url:       # url的地址拼出来就是http://localhost:1000/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

@@ -1,0 +1,16 @@
+server:
+  port: 6000
+spring:
+  application:
+    name: crowd-order
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:         # 这个是用来实现session共享的功能，将session保存在redis服务器中
+    host: 192.168.13.128
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/

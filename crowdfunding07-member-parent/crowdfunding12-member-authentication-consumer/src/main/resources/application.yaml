@@ -1,0 +1,29 @@
+server:
+  port: 4000
+spring:
+  application:
+    name: crowd-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:       # 这个是用来实现session共享的功能，将session保存在redis服务器中
+    host: 192.168.13.128
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+# 由于项目刚启动第一次进行redis操作时会比较慢，可能被ribbon认为是超时报错，因此通过下面的配置延长ribbon超时的时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+# 这个是一个发送验证码的配置
+short:
+  message:
+    host: https://dfsns.market.alicloudapi.com
+    path: /data/send_sms
+    method: post
+    appCode: c62c95ce2ec140ec930eac5d306ac6c3

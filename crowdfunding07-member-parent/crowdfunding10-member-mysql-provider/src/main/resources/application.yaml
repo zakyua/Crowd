@@ -1,0 +1,26 @@
+server:
+  port: 2000
+
+  # 设置端口号
+spring:
+  application:
+    name: crowd-mysql     # 给微服务起名字
+  datasource:             # 配置数据源
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/project_crowd
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.jdbc.Driver      # 数据库驱动
+eureka:      # 需要把当前的微服务配属到注册中心上去
+  client:
+    service-url:
+     defaultZone: http://localhost:1000/eureka/
+
+
+mybatis:      # 配值mybatis 扫描mapper所在的接口
+  mapper-locations: classpath*:/mybatis/mapper/*Mapper.xml
+logging:
+  level:
+    com.atguigu.crowd.mapper: debug
+    com.atguigu: debug
