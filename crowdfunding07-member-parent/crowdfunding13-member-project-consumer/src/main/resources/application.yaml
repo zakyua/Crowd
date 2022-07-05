@@ -18,8 +18,8 @@ eureka:
 
 aliyun:
   oss:
-    access-key-id: LTAI5tKpWkGR54a37CnJWHvA
-    access-key-secret: 7ktWKqwhBZZEFkGqviQtxhkudn5acA
-    bucket-domain: https://crowd-2020.oss-cn-hangzhou.aliyuncs.com
+    access-key-id: 
+    access-key-secret: 
+    bucket-domain: 
     bucket-name: crowd-2020
-    end-point: oss-cn-hangzhou.aliyuncs.com
+    end-point:
