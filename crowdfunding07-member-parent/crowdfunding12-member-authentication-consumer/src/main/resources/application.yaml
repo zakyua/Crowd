@@ -23,7 +23,7 @@ ribbon:
 # 这个是一个发送验证码的配置
 short:
   message:
-    host: https://dfsns.market.alicloudapi.com
+    host: 
     path: /data/send_sms
     method: post
-    appCode: c62c95ce2ec140ec930eac5d306ac6c3
+    appCode: 
